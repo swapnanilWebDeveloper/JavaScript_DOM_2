@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <p id="dr_fname">Suryendu</p>
+     <p id ="dr_lname">Sarkar</p>
+     <p id="clg_name">Burduwan</p>
+     <p id="anatomy_sub">83</p>
+     <p id="physiology_sub">89</p>
+     <p id="bio_chemistry_sub">94</p>
+     <button onclick="doctor_func()">get results</button>
+     <p id="dr_fullname"></p>
+     <p id="dr_clg"></p>
+     <p id="dr_anatomy"></p>
+     <p id="dr_physiology"></p>
+     <p id="dr_bio_chemistry"></p>
+     <p id="dr_total"></p>
+     <p id="dr_perc"></p>
+     <p id="dr_grade"></p>
+</body>
+<script>
+    function doctor_func(){
+       var fname = document.getElementById('dr_fname');
+       var lname = document.getElementById('dr_lname');
+       var fullname = document.getElementById('dr_fullname');
+       fullname.innerText = "full name is : "+fname.innerText+" "+lname.innerText;
+
+       var clgname = document.getElementById('clg_name');
+       var clg = document.getElementById('dr_clg');
+       clg.innerText = "college is : "+clgname.innerText+" medical college";
+
+       var anatomy = document.getElementById('anatomy_sub');
+       var ana =  document.getElementById('dr_anatomy');
+       ana.innerText = "Marks in anatomy is :"+anatomy.innerText;  
+
+       var physiology = document.getElementById('physiology_sub');
+       var phy =  document.getElementById('dr_physiology');
+       phy.innerText = "Marks in physiology is :"+physiology.innerText;  
+
+       var bio_chemistry = document.getElementById('bio_chemistry_sub');
+       var bio =  document.getElementById('dr_bio_chemistry');
+       bio.innerText = "Marks in Bio-chemistry is :"+bio_chemistry.innerText;  
+
+       var total  = document.getElementById('dr_total');
+       total.innerText = parseInt(anatomy.innerText) + parseInt(physiology.innerText) + parseInt(bio_chemistry.innerText);
+
+       var per = document.getElementById('dr_perc');
+    
+       per.innerText = parseInt(total.innerText) / 3;
+
+       prc = parseInt(total.innerText) / 3 ;
+
+       var grade = document.getElementById('dr_grade');
+
+       if(prc >= 90){
+          grade.innerText ="Excellent"; 
+       }
+       else if(prc >= 70 && prc < 90){
+        grade.innerText = "very good";
+       }
+       else if(prc >= 50 && prc < 70){
+        grade.innerText = "good";
+       }
+       else if(prc >= 30 && prc < 50){
+        grade.innerText = "pass";
+       }
+       else{
+        grade.innerText = "fail";
+       }
+
+       total.innerText = "total marks is : "+total.innerText;
+ 
+       per.innerText = "total marks is : "+per.innerText;
+
+       grade.innerText = "grade of the student is = "+grade.innerText;
+
+       fullname.style.color = "aqua";
+       fullname.style.backgroundColor="black";
+       fullname.style.border = "8px solid green";
+       fullname.style.borderRadius = "15px";
+       fullname.style.width = "300px";
+       fullname.style.height = "100px";
+       fullname.style.marginLeft = "100px";
+       fullname.style.marginTop = "60px";
+       fullname.style.paddingLeft = "80px";
+       fullname.style.paddingTop = "60px";
+    }
+</script>
+</html>

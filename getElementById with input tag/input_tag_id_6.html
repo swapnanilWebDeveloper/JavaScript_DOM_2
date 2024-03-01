@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="show_code"></p>
+    <p id="verify">code is : "Akshay Kumar"</p>
+    Enter the discount code : <input type="text" id="discount_code" onkeyup="check_code()">
+</body>
+
+<script>
+    function check_code(){
+        var code = document.getElementById('discount_code');
+        var show = document.getElementById('show_code');
+
+        if(code.value == "Akshay Kumar"){
+            show.innerText = "This is a valid code : "+code.value;
+        }
+        else{
+            show.innerText = "This is invalid code XXXX : "+code.value; 
+        }
+    }
+</script>
+</html>

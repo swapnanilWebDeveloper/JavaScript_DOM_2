@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <p id="info_gather">Swapnanil</p>
+     <p id="info_gather">roy</p>
+     <p id="info_gather">BCA</p>
+     <p id="info_gather">Brainware University</p>
+     <p id="info_gather">Barasat</p>
+     <p id="info_gather">Ranaghat</p>
+     <p id="info_gather">nadia</p>
+     <p id="info_gather">Westbengal</p>
+     <input type="button" onclick="check_query()" value="click here" id="name">
+     <h4 id="show_info"></h4>
+     <h4 id="show_info"></h4>
+     <h4 id="show_info"></h4>
+     <h4 id="show_info"></h4>
+     <h4 id="show_info"></h4>
+     <h4 id="show_info"></h4>
+     <h4 id="show_info"></h4>
+     <h4 id="show_info"></h4>
+</body>
+
+    <script>
+        function check_query(){
+            var data_in = document.querySelectorAll('#info_gather');
+            var data_show = document.querySelectorAll('#show_info');
+            var arr_data = ["first name","last name","course","college","college location","home town","district","state"];
+
+            for(var i = 0; i < data_in.length; i++){
+               data_show[i].innerHTML = arr_data[i]+" is : "+data_in[i].innerHTML;
+            }
+
+        }
+    </script>
+</html>

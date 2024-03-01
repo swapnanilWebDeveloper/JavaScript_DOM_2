@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #prime_minister{
+            color: red; 
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+     <p id="prime_minister">Indira Gandhi</p>
+     <button onclick="change_style()">click to change style</button>
+</body>
+<script>
+     function change_style(){
+         var name = document.getElementById('prime_minister');
+         name.innerText = "Narendra damodar modi";
+
+         name.style.color="aqua";
+         name.style.backgroundColor = "black";
+         name.style.border="10px solid green";
+         name.style.width = "300px";
+         name.style.height = "200px";
+         name.style.marginLeft = "150px";
+         name.style.marginTop = "80px";
+         name.style.paddingLeft = "100px";
+         name.style.paddingTop = "60px";
+     }
+</script>
+</html>

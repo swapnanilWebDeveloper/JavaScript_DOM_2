@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="show_result"></p>
+    
+    write down your friend request : <input type="text" id="request_friend" onkeyup="check_request()">
+</body>
+
+<script>
+    function check_request(){
+        var request = document.getElementById('request_friend');
+        var res = document.getElementById('show_result');
+
+       if(request.value.length > 30){
+          res.innerText = "Friend request can not be greater than 30 charecters : "+request.value;
+       }
+       else if(request.value.length < 10){
+          res.innerText = "Friend request can not be lesser than 10 charecters : "+request.value;
+       }
+       else{
+        res.innerText = "Friend request is valid : "+request.value;
+       }
+    }
+</script>
+</html>

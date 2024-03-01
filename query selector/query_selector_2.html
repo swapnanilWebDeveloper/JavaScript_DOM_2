@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     Enter name: <input type="text" class="data_get"><br> 
+     Enter skill :<input type="text" class="data_get"><br>
+     ENter your course: <input type="text" class="data_get"><br>
+    <button onclick="print_data()">Click here</button>
+    <h4 id="info_set">Name :</h4>
+    <h4 id="info_set">skill :</h4>
+    <h4 id="info_set">course :</h4>
+</body>
+<script>
+      function print_data(){
+        var data = document.querySelector('.data_get');
+        var info = document.querySelector('#info_set');
+
+        console.log(data);
+        info.innerHTML = info.innerHTML + " is : "+data.value;
+
+        info.style.color = "aqua";
+        info.style.backgroundColor = "green";
+        info.style.width = "300px";
+        info.style.heigth = "100px";
+        info.style.border = "5px solid red";
+        info.style.fontSize = "30px";
+      }
+</script>
+</html>

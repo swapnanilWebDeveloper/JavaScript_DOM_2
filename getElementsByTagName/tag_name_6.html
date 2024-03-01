@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>enter element for array : 1</h1>
+    <h2>39</h2>
+    <h1>enter element for array : 2</h1>
+    <h2>21</h2>
+    <h1>enter element for array : 3</h1>
+    <h2>50</h2>
+    <h1>enter element for array : 4</h1>
+    <h2>40</h2>
+    <h1>enter element for array : 5</h1>
+    <h2>48</h2>
+    <h1>enter element for array : 6</h1>
+    <h2>45</h2>
+    <h1>enter element for array : 7</h1>
+    <h2>66</h2>
+    <h1>enter element for array : 8</h1>
+    <h2>19</h2>
+    <h1>enter element for array : 9</h1>
+    <h2>28</h2>
+    <h1>enter element for array : 10</h1>
+    <h2>33</h2>
+    <h3 id = "smallest"></h3>
+    <button onclick="find_min()">cick to sum the elements of array</button>
+</body>
+<script>
+    function find_min(){
+        var tag_arr = document.getElementsByTagName('h2');
+        var min = parseInt(tag_arr[0].innerText); 
+        var least = document.getElementById('smallest');
+        for(var i = 1; i < tag_arr.length; i++){
+
+            if(tag_arr[i].innerText < min){
+                
+                min = tag_arr[i].innerText ;
+            }
+        }
+        least.innerText = "The smallest number is = "+min;
+    }
+</script>
+</html>

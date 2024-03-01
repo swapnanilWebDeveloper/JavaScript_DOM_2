@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <a id="page_link" href="https://www.google.com/">google</a>
+       <p id ="name" style = "color: green;">Akshay Kumar</p>
+       <button onclick="change_name()">change name</button>
+</body>
+<script>
+    function change_name(){
+        var data = document.getElementById('name');
+        data.innerText = "salman khan"; 
+        data.style.color = "red";
+        data.style.backgroundColor = "aqua";
+        data.style.fontSize = "40px";
+        var link_data = document.getElementById('page_link');
+        link_data.href = "https://www.youtube.com/";
+         console.log("link after changing it = "+link_data.href);
+    }
+
+        var link_data = document.getElementById('page_link');
+        console.log("link before changing it = "+link_data.href);
+</script>
+</html>

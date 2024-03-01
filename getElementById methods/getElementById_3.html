@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <p id ="name" style = "color: green;">Akshay Kumar</p>
+       <button onclick="change_name()">change name</button>
+</body>
+<script>
+    function change_name(){
+        var data = document.getElementById('name');
+        data.innerText = "salman khan";
+       document.write("changed name is = "+data.innerText+"<br>");
+       document.write("color is = "+data.style.color+"<br>");
+    }
+</script>
+</html>

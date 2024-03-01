@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1 id="information">swapnanil</h1>
+    <h1 id="information">roy</h1>
+    <h1 id="information">BCA</h1>
+
+    <h2 class="data">Brainware University</h2>
+   
+
+    <p>javascript</p>
+   
+
+    <button onclick="change_css()">click to change style</button>
+</body>
+
+<script>
+         function change_css(){
+            var data_1 = document.querySelectorAll('#information');
+            var data_2 = document.getElementsByClassName('data');
+            var data_3 = document.getElementsByTagName('p');
+            
+            data_1[0].style.color = "red";
+            data_1[1].style.backgroundColor = "yellow";
+            data_1[2].style.border= "3px solid green";
+
+            data_2[0].style.color = "aqua";
+            data_2[0].style.backgroundColor = "black";
+            data_2[0].style.border = "5px solid red";
+            data_2[0].style.width = "200px";
+            data_2[0].style.height = "70px";
+
+            data_3[0].style.color = "green";
+            data_3[0].style.backgroundColor = "yellow";
+            data_3[0].style.border = "5px solid black";
+            data_3[0].style.width = "300px";
+            data_3[0].style.height = "120px";
+            data_3[0].style.fontSize = "20px";
+        }
+</script>
+
+</html>

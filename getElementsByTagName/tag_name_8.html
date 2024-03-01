@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Suryendu</h1>
+    <h1>Sarkar</h1>
+    <h1>Ranaghat</h1>
+    <h1>Nadia</h1>
+    <h1>Burduwan Medical college</h1>
+    <h1>MBBS</h1>
+    <h1>4 th year</h1>
+    <h1>447</h1>
+    <button onclick="get_data()">click to get data</button>
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+</body>
+<script>
+      function get_data(){
+        var info = document.getElementsByTagName('h1');
+        var arr_info = document.getElementsByTagName('h2');
+        var data_arr = ["first name","last name", "city","district","college","degree","year of studying","neet marks"];
+
+        for(var i = 0; i < info.length; i++){
+            arr_info[i].innerText = data_arr[i]+" is : "+info[i].innerText;
+        }
+      }
+</script>
+</html>

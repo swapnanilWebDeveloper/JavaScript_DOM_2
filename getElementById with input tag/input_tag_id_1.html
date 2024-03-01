@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="show_name"></p>
+    <input type="text" id="emp_name" value="Akshay Kumar"><br>
+    <button onclick="checkInput()">submit</button>
+</body>
+<script>
+    function checkInput(){
+        var name = document.getElementById('emp_name').value;
+        document.getElementById('show_name').innerText = name;
+        console.log(name);
+    }
+</script>
+</html>

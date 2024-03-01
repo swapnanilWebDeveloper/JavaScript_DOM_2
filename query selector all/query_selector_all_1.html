@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <p id="show_name">id 1</p>
+     <p id="show_name">id 2</p>
+     <p id="show_name">id 3</p>
+     <p id="show_name">id 4</p>
+     <p id="show_name">id 5</p>
+     <p id="show_name">id 6</p>
+     <p id="show_name">id 7</p>
+     <p id="show_name">id 8</p>
+     <p id="show_name">id 9</p>
+     <p id="show_name">id 10</p>
+     <input type="button" onclick="check_query()" value="click here" id="name">
+</body>
+
+    <script>
+        function check_query(){
+            var name = document.querySelectorAll('#show_name');
+            
+            for(var i = 0; i < name.length; i++){
+                name[i].innerHTML = name[i].innerHTML+" this is query : "+(i+1);
+            }
+        }
+    </script>
+</html>

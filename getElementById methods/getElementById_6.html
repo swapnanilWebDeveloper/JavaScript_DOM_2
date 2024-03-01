@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <a id="url_cng" href="https://www.youtube.com">youtube</a>
+      <p id="eng_fname" style="color: red; background-color: yellow;">Mayuk</p>
+      <p id="eng_lname" style="color: white; background-color: black;">Mukhrejee</p>
+      <p id="full_name"></p>
+      <p id="clg">IIEST</p>
+      <p id="java_dev">89</p>
+      <p id="andriod_dev">94</p>
+      <p id="web_dev">84</p>
+      <p id="total_marks"></p>
+      <p id="perc_calc"></p>
+      <p id="grade_calc"></p>
+      <button onclick="func_engg()">click to get results</button>
+</body>
+<script>
+        function func_engg(){
+            var fname = document.getElementById('eng_fname');
+            var lname = document.getElementById('eng_lname');
+            var name = document.getElementById('full_name');
+            name.innerText ="Name is : "+fname.innerText +" "+lname.innerText; 
+
+            name.style.color = "aqua";
+            name.style.backgroundColor="green";
+            name.style.border = "5px solid red";
+            name.style.width= "200px";
+            name.style.height ="50px"; 
+            name.style.borderRadius = "20px";
+            
+            var clg_name = document.getElementById('clg');
+            clg_name.innerText = "college name is : "+clg_name.innerText;
+            var java_dev = document.getElementById('java_dev');
+
+            var andriod_dev = document.getElementById('andriod_dev');
+
+            var web_dev = document.getElementById('web_dev');
+           
+            var total = document.getElementById('total_marks');
+            total.innerText = parseInt(java_dev.innerText) +parseInt(andriod_dev.innerText) + parseInt(web_dev.innerText);
+
+            var percentage = document.getElementById('perc_calc');
+            percentage.innerText = parseInt(total.innerText) / 3;
+
+            var grade = document.getElementById('grade_calc');
+            console.log(percentage.innerText);
+            var pr = parseInt(percentage.innerText);
+            if(pr>=90){
+                grade.innerText = 'out-standing'; 
+            }
+            else if(pr>= 70 && pr< 90){
+                grade.innerText = 'Excellent';
+            }
+            else if(pr>= 50 && pr< 70){
+                grade.innerText = 'very good';
+            }
+            else if(pr>= 30 && pr< 50){
+                grade.innerText = 'pass';
+            }
+            else{
+                grade.innerText = 'fail';
+            }
+
+            java_dev.innerText = "marks in java is : "+ java_dev.innerText;
+            andriod_dev.innerText = "marks in Android is : "+ andriod_dev.innerText;
+            web_dev.innerText = "marks in web is : "+ web_dev.innerText;
+
+            total.innerText = "total marks is : "+total.innerText;
+
+            percentage.innerText = "percentage of student is : "+percentage.innerText;
+
+            grade.innerText = "grade of student is : "+ grade.innerText;
+
+           
+
+            var change_url = document.getElementById('url_cng');
+            change_url.href = "https://www.google.com";
+            console.log("After changing the link = "+change_url.href);
+        }
+            var change_url = document.getElementById('url_cng');
+            
+            console.log("Before changing the link = "+change_url.href);
+</script>
+</html>

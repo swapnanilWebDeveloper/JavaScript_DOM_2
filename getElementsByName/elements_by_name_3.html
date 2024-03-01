@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <form action="">
+        <input type="text" placeholder="enter first name" name="name"><br>
+        <input type="text" placeholder="enter last name" name="name"><br>
+        <input type="text" placeholder="enter father's name" name="name"><br>
+        <input type="text" placeholder="enter mother's name" name="name"><br>
+
+        <input type="text" placeholder="enter city" name="address"><br>
+        <input type="text" placeholder="enter district" name="address"><br>
+        <input type="text" placeholder="enter state" name="address"><br>
+        <input type="text" placeholder="enter country" name="address"><br>
+
+        <button type="button" onclick="submit_data()">submit here</button>
+     </form>
+
+     <p class="info_data">first name </p>
+     <p class="info_data">last name</p>
+     <p class="info_data">father's name</p>
+     <p class="info_data">mother's name</p>
+     <p class="info_data">city</p>
+     <p class="info_data">nadia</p>
+     <p class="info_data">westbengal</p>
+     <p class="info_data">india</p>
+</body>
+      <script>
+          function submit_data(){
+            var data_name = document.getElementsByName('name');
+            var data_address = document.getElementsByName('address');
+            var data_info = document.getElementsByClassName('info_data');
+           
+            for(var i = 0; i < data_name.length; i++ ){
+                data_info[i].innerHTML = data_info[i].innerHTML+" is : "+data_name[i].value;
+            }
+
+            for(var i = 0; i < data_address.length; i++){
+                data_info[data_name.length + i].innerHTML =  data_info[data_name.length + i].innerHTML+" is : "+data_address[i].value;
+            }
+          }
+      </script>
+</html>

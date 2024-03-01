@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="show_name"></p>
+    <input onkeyup ="checkInput()"  type="text" id="emp_name" ><br>
+</body>
+<script>
+    // onwrite on the input tag
+    function checkInput(){
+        var name = document.getElementById('emp_name').value;
+
+        if(name.length == 10){
+            document.getElementById('show_name').innerText = "This is a valid number :"+name;
+        }
+        else if(name.length < 10){
+            document.getElementById('show_name').innerText = "This is a invalid number XXXX(less than 10 chrecters) :"+name;
+        }
+        else{
+            document.getElementById('show_name').innerText = "This is a invalid number XXXX(greater than 10 chrecters) :"+name;
+        }
+    }
+</script>
+</html>

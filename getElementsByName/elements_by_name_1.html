@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" placeholder="Enter your name" name="name"><br>
+        <input type="text" placeholder="Enter Address" name="address"><br>
+        <input type="text" placeholder="enter address 1" name="address"><br>
+        <input type="text" placeholder="Enter age" name="age"><br>
+
+        <button type="button" onclick="submit_now()">Submit here</button>
+    </form>
+    <p class="print_data"></p>
+    <p class="print_data"></p>
+    <p class="print_data"></p>
+    <p class="print_data"></p>
+</body>
+
+   <script>
+       function submit_now(){
+        var name =  document.getElementsByName('name');
+        var data = document.getElementsByClassName('print_data');
+        var address_1 = document.getElementsByName('address');
+        var age_data = document.getElementsByName('age');
+
+        data[0].innerHTML = "name is : "+name[0].value;
+        data[1].innerHTML = "first address is : "+address_1[0].value;
+        data[2].innerHTML = "Second address is : "+address_1[1].value;
+        data[3].innerHTML = "age is : "+age_data[0].value;
+       }
+   </script>
+
+</html>

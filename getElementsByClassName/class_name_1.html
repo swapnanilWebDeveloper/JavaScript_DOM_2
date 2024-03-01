@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .doctor_info {
+            color: green;
+        }
+        .doctor_res{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+        <h1 class="doctor_info"> Suryendu</h1>
+        <h2 class="doctor_info">Sarkar</h2>
+        <p class="doctor_info">Burduwan Medical College</p>
+        <h1 class="doctor_info"> MBBS</h1>
+        <h2 class="doctor_info"> 4th year</h2>
+        <p class="doctor_info"> 598</p>
+        <h1 class="doctor_info"> 475</h1>
+        <h2 class="doctor_info">Ranaghat , Thana para</h2>
+        <p class="doctor_info"> Nadia</p>
+       
+        <button onclick="doctor_func()">Click me for results</button>
+
+        <h3  class="doctor_res"></h3>
+        <h2  class="doctor_res"></h2>
+        <p class="doctor_res"></p>
+        <h3  class="doctor_res"></h3>
+        <h2  class="doctor_res"></h2>
+        <p class="doctor_res"></p>
+        <h1  class="doctor_res"></h1>
+        <h3  class="doctor_res"></h3>
+        <h2 class="doctor_res"></h2>
+    </div>
+</body>
+    <script>
+        function doctor_func(){
+           var data = document.getElementsByClassName('doctor_info');
+           var res = document.getElementsByClassName('doctor_res');
+           var info_arr = ["first name","last name","college","degree","year of studying","neet marks","12th marks","address","district"];
+
+           for(var i = 0; i < data.length; i++){
+                res[i].innerHTML = info_arr[i] + " is : "+data[i].innerHTML ;
+           }
+
+           res[0].style.color = "blue";
+           res[0].style.backgroundColor = "yellow";
+           res[0].style.width = "200px";
+           res[0].style.height = "80px";
+           res[0].style.border = "12px solid red";
+           res[0].style.paddingTop = "50px";
+           res[0].style.paddingLeft = "20px";
+        }
+    </script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .student {
+            color: red;
+        }
+        .resultant{
+           color: green;
+        }
+    </style>
+</head>
+
+<body>
+        <h1 class="student"> swapnanil</h1>
+        <h2 class="student">Roy</h2>
+        <p class="student">Ranaghat</p>
+        <h1 class="student"> Nadia</h1>
+        <h2 class="student">West Bengal</h2>
+        <p class="student">Brainware</p>
+        <h2 class="student">Barasat</h2>
+        <h2 class="student">Bachelor of computer Application</h2>
+     
+        <button onclick="student_id()">Click me for results</button>
+        <p class="resultant">first name : </p>
+        <p class="resultant">last name : </p>
+        <p class="resultant">town : </p>
+        <p class="resultant">district : </p>
+        <p class="resultant">state : </p>
+        <p class="resultant">University : </p>
+        <p class="resultant">University location</p>
+        <p class="resultant">degree : </p>
+
+</body>
+    <script>
+        function student_id(){
+           var data = document.getElementsByClassName('student');
+           var info = document.getElementsByClassName('resultant');
+
+           for(var i = 0; i < data.length; i++){
+               info[i].innerHTML = info[i].innerHTML +" is : "+ data[i].innerHTML;
+           }
+
+           info[0].style.color = "blue";
+           info[0].style.backgroundColor = "yellow";
+           info[0].style.width = "200px";
+           info[0].style.height = "80px";
+           info[0].style.border = "5px solid black";
+           info[0].style.borderRadius = "15px";
+           info[0].style.paddingTop = "30px";
+           info[0].style.paddingLeft = "60px";
+        }
+    </script>
+</html>

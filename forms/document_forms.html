@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+      first name:  <input type="text" name="stu_name"><br><br>
+      last name:  <input type="text" name="stu_name"><br><br>
+      fathre's name  <input type="text" name="stu_name"><br><br>
+      college location:  <input type="text" name="address"><br><br>
+      temporary location <input type="text" name="address"><br><br>
+    </form> 
+
+    <form action="#">
+       mother's name : <input type="text" name="stu_name"><br><br>
+       college name : <input type="text" name="stu_name"><br><br>
+       home town: <input type="text" name="address"><br><br>
+       district :<input type="text" name="address"><br><br>
+       state : <input type="text" name="address"><br><br>
+    </form> 
+
+    <button onclick="form_submit()">click to submit</button>
+
+    <p class="data_print"></p>
+    <p class="data_print"></p>
+    <p class="data_print"></p>
+    <p class="data_print"></p>
+    <p class="data_print"></p>
+    <p class="data_print"></p>
+    <p class="data_print"></p>
+    <p class="data_print"></p>
+    <p class="data_print"></p>
+    <p class="data_print"></p>
+</body>
+ 
+    <script>
+        function form_submit(){
+            var data_1 = document.forms[0].stu_name;
+            var data_2 = document.forms[0].address;
+            var data_3 = document.forms[1].stu_name;
+            var data_4 = document.forms[1].address;
+
+            var print_data = document.getElementsByClassName('data_print');
+
+            console.log("first stu_name size : "+data_1.length);
+
+            for(var i = 0; i < data_1.length; i++){
+                print_data[i].innerHTML = data_1[i].value;
+            }
+
+            for(var i = 0; i < data_2.length; i++){
+                print_data[i+data_1.length].innerHTML = data_2[i].value;
+            }
+
+            for(var i = 0; i < data_3.length; i++){
+                print_data[i+data_1.length+data_2.length].innerHTML = data_3[i].value;
+            }
+
+            for(var i = 0; i < data_1.length; i++){
+                print_data[i+data_1.length+data_2.length+data_3.length].innerHTML = data_4[i].value;
+            }
+        }
+    </script>
+</html>
